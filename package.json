@@ -1,0 +1,19 @@
+{
+  "name": "dxy-ui",
+  "version": "1.0.0",
+  "description": "Learn how to build UI Toolkit based on vue. Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenglinismydream/dxy-ui.git"
+  },
+  "author": "617146813@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fenglinismydream/dxy-ui/issues"
+  },
+  "homepage": "https://github.com/fenglinismydream/dxy-ui#readme"
+}
