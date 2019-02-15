@@ -1,0 +1,18 @@
+.DS_Store
+node_modules/
+**/node_modules/
+
+# Editor directories and files
+
+.idea
+.vscode
+dist
+dist/
+dist/*
+/dist
+/dist/
+/dist/*
+/.gitignore.swp
+/.deploy_test.sh.swp
+/package-lock.json
+/deploy_test.sh
