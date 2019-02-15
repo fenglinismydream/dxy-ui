@@ -31,10 +31,9 @@ Learn how to build UI Toolkit based on vue. Js
 >> vue-loader
 >>> 首先安装 *vue-loader*, *css-loader*, *vue-style-loader*, *vue-template-compiler*
 >>> 这里我们需要配置 *resolve.alias*, 不然webpack无法找到Vue模块
->>>> 首先在文件头部引入:
-###   
-  `const VueLoaderPlugin = require('vue-loader/lib/plugin')`
-    然后在 *plugins* 数组中添加这个插件对象
+>>>> 首先在文件头部引入: 
+>>>> `const VueLoaderPlugin = require('vue-loader/lib/plugin')`
+>>>> 然后在 *plugins* 数组中添加这个插件对象
 >>>> `new VueLoaderPlugin()`
 >>>> 随后将resolve.alias配置如下
 >>>> (```)
@@ -46,7 +45,7 @@ Learn how to build UI Toolkit based on vue. Js
 >>>> 还要添加一个resolve.extensions属性,可以用来省略文件后缀
 >>>> `extensions:['*', '.js', '.json', '.vue']`
 >>>> 然后修改index.js文件如下
-    (```)
+>>>> (```)
 import Vue from 'vue';
 import App from './App';
 
@@ -58,38 +57,38 @@ new Vue({
     (```)
 >>>> 同级目录下创建App.vue
     (```)
-<template>
-  <h1>Hello World!</h1>
-</template>
+      <template>
+        <h1>Hello World!</h1>
+      </template>
 
-<script>
-  export default {
-    name: 'App'
-  }
-</script>
+      <script>
+        export default {
+          name: 'App'
+        }
+      </script>
 
-<style>
-  html, body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-</style>
+      <style>
+        html, body {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-size: 16px;
+        }
+      </style>
     (```)
 >> 注: css-loader版本过高会导致webpack构建报错,暂不知道什么原因,我之前是2.x改为0.28就好了.而且在webpack+babel打包构建,可能会抛出语法错误.因为新的构建方式会加入"use stric",为了解决安装如下,
 >>>    "babel-preset-stage-2": "6.22.0",
 >>>    "babel-plugin-dynamic-import-node": "1.2.0",
 >>>    "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
 >> 并在.babelrc 中添加
- (```)
+(```)
 "env": {
   "test": {
     "presets": ["env", "stage-2"],
     "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
   }
 }
-  (```)
+(```)
 
 
 
