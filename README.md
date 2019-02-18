@@ -91,6 +91,26 @@ html, body {
   }
 }
 ```
+>
+> 5.优化css代码
+>> 使用 *postcss*的*autoprefixer*插件为css代码自动添加前缀以适应不同的浏览器
+>>> `npm i postcss-loader autoprefixer -D`
+>> 修改 *module.rules* 中的css配置项,如下
+```
+{
+  test: /\.css$/,
+  use: ['vue-style-loader', 'css-loader', 'postcss-loader']
+}
+```
+>> 根目录新增配置文件*postcss.config.js*,内容如下
+```
+module.exports = {
+  plugins: [
+    require('autoprefixer')
+  ]
+}
+```
+
 
 
 
