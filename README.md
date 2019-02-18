@@ -110,6 +110,25 @@ module.exports = {
   ]
 }
 ```
+>
+> 6.第三方库单独打包
+>> 使用autodll-webapck-plugin 对第三方依赖库打包,每次打包,这各插件会检查注册在entry中的第三方库是否发生了变化,如果没有变化,插件就会使用缓存中的打包文件,减少了打包的时间,这是Hash也不会变化.这个库会自动将打包后的文件注入到index.html中.
+>> `npm i autodll-webpack-plugin -D`
+> 
+>> 在*webpack.base.conf.js*中引入 `const AutoDllPlugin = require('autodll-webpack-plugin')`
+> 
+>> 在plugins属性中添加这个插件
+```
+new AutoDllPlugin({
+  inject: true, // will inject the DLL bundle to index.html
+  debug: true,
+  filename: '[name]_[hash].js',
+  path: './dll',
+  entry: {
+    vendor: ['vue', 'vue-router', 'vuex']
+  }
+})
+```
 
 
 
