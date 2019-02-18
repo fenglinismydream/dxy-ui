@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const AutoDllPlugin = require('autodll-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -50,6 +51,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../index.html')
+    }),
+    new AutoDllPlugin({
+      inject: true, // 自动注入到index.html
+      debug: true,
+      filename: '[name]_[hash].js',
+      path: './dll',
+      entry: {
+        vendor: ['vue']
+      }
     }),
     new VueLoaderPlugin()
   ]

@@ -6,6 +6,7 @@ module.exports = merge(baseConfig, {
   devtool: 'cheap-module-eval-source-map', // cheap-module-eval-source-map is faster for development
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
-    open: true
+    open: true,
+    overlay: true // 全屏显示编译错误和警告
   }
 });

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/fenglinismydream/dxy-ui#readme",
   "devDependencies": {
+    "autodll-webpack-plugin": "^0.4.2",
     "autoprefixer": "^9.4.7",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.1",
