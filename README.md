@@ -129,6 +129,16 @@ new AutoDllPlugin({
   }
 })
 ```
+> 
+> 7.使用less预处理器
+>> `npm i less less-loader -D`
+>> 配置如下
+```
+{
+  test: /\.less$/,
+  use: ['style-loader', 'css-loader', 'less-loader']
+}
+```
 
 
 
