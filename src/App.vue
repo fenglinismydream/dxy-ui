@@ -8,8 +8,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 html{
+  h1 {
+    color: red
+  }
   padding: 0px;
 }
 </style>

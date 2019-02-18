@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin')
@@ -45,6 +46,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['vue-style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
       }
     ]
   },
@@ -61,6 +66,7 @@ module.exports = {
         vendor: ['vue']
       }
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new webpack.optimize.SplitChunksPlugin() // 使用默认提取配置来提取公共代码
   ]
 }
