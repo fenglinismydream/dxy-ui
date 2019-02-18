@@ -139,6 +139,17 @@ new AutoDllPlugin({
   use: ['style-loader', 'css-loader', 'less-loader']
 }
 ```
+> 
+> 8.抽取css到单文件
+>> `npm i mini-css-extract-plugin -D`
+>> 配置文件头部引入,并在需要打包的时,将css配置的 *vue-style-loader* 替换成 *MiniCssExtractPlugin.loader*,然后再plugins里添加
+>> 
+```
+new MiniCssExtractPlugin({
+  filename: "[name].css",
+  chunkFilename: "[id].css"
+})
+```
 
 
 
