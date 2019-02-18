@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin')
+const MiNiCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
@@ -45,11 +46,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader', 'postcss-loader']
+        use: [
+          process.env.NODE_ENV !== 'production'
+            ? 'vue-style-loader'
+            : MiNiCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        use: [
+          process.env.NODE_ENV !== 'production'
+            ? 'vue-style-loader'
+            : MiNiCssExtractPlugin.loader, 'css-loader', 'less-loader']
       }
     ]
   },
@@ -65,6 +72,10 @@ module.exports = {
       entry: {
         vendor: ['vue']
       }
+    }),
+    new MiNiCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
     new VueLoaderPlugin(),
     new webpack.optimize.SplitChunksPlugin() // 使用默认提取配置来提取公共代码
