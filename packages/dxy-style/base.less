@@ -1,0 +1,149 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 0;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button, input, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.dxy-common--bg {
+  background-color: #698EF8;
+  &:active {
+    background-color: #5F84D7;
+    color: #EEE;
+  }
+}
+.dxy-common--cr {
+  color: #698EF8;
+  &:active {
+    color: #5F84D7
+  }
+}
+.dxy-common--br {
+  border:1px solid #698EF8;
+  &:active {
+    border-color: #5F84D7;
+  }
+}
+
+.dxy-overflow-hidden {
+  overflow: hidden!important;
+}
+
+.dxy-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+[class*=dxy-hairline] {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 0 solid #F2F4F5;
+  }
+}
+
+.dxy-hairline--top:after {
+  border-top-width: 1px;
+}
+
+.dxy-hairline--left:after {
+  border-left-width: 1px;
+}
+
+.dxy-hairline--right:after {
+  border-right-width: 1px;
+}
+
+.dxy-hairline--bottom:after {
+  border-bottom-width: 1px;
+}
+
+.dxy-hairline--top-bottom:after {
+  border-width: 1px 0;
+}
+
+@keyframes dxy-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dxy-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes dxy-rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes dxy-rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+.dxy-fade-enter-active {
+  animation: 0.3s dxy-fade-in;
+  -webkit-animation: 0.3s dxy-fade-in;
+}
+
+.dxy-fade-leave-active {
+  animation: 0.3s dxy-fade-out;
+  -webkit-animation: 0.3s dxy-fade-out;
+}
+
+.dxy-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+

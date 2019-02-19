@@ -1,0 +1,52 @@
+.dxy-button {
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  line-height: 42px;
+  padding: 0px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  -webkit-appearance: normal;
+  &[display] {
+    background-color: #d8d8d8;
+    color: #999;
+    border: none;
+  }
+  &--large{
+    width: 100%;
+    border-radius: 0;
+  }
+  &--normal {
+    width: 335px;
+  }
+  &--small {
+    width: 130px;
+  }
+  &--default {
+    color: #fff;
+    border: none;
+  }
+  &--plain {
+    background-color: #fff;
+  }
+  &--block{
+    display: block;
+    width: 100%;
+  }
+  &--semicircle{
+    width: auto;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #b3b3b3;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    &:active {
+      background-color: #999;
+    }
+  }
+}

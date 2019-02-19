@@ -4,10 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin')
 const MiNiCssExtractPlugin = require('mini-css-extract-plugin')
-
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 module.exports = {
   entry: {
-    bundle: path.resolve(__dirname, '../src/index.js')
+    bundle: path.resolve(__dirname, '../example/index.js')
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -18,7 +20,8 @@ module.exports = {
     extensions: ['.js', '.json', '.vue'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': path.resolve(__dirname, '../src')
+      '@': resolve('example'),
+      '$pkg': resolve('packages')
     }
   },
   module: {

@@ -7,6 +7,7 @@ module.exports = merge(baseConfig, {
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
     open: true,
-    overlay: true // 全屏显示编译错误和警告
+    overlay: true, // 全屏显示编译错误和警告
+    historyApiFallback: true, //路由类型history 需要设置为true
   }
 });
