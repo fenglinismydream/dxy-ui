@@ -1,12 +1,13 @@
 import Button from './button'
+import Icon from './icon'
 
 const components = [
-  Button
+  Button,
+  Icon
 ]
 
 const install = Vue => {
   components.forEach(Component => {
-    console.log(Component)
     Vue.use(Component)
   })
 }
@@ -17,7 +18,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export {
   install,
-  Button
+  Button,
+  Icon
 }
 
 export default {

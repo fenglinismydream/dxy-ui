@@ -10,9 +10,7 @@ const routes = [
 
 const router = new Router({
   mode: 'history',
-  routes: [
-    { path: '/button', name: 'button', component: () => import('@/pages/button/index') }
-  ]
+  routes
 })
 
 export default router

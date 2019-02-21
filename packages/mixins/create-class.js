@@ -23,7 +23,6 @@ const prefix = function (name, extra) {
     }
     obj[name + ELEMENT + item] = extra[item]
   })
-  console.log(obj)
   return obj
 }
 
