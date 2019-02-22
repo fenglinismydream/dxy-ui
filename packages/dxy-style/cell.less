@@ -1,0 +1,69 @@
+.dxy-cell-group {
+  background: #ffffff
+}
+.dxy-cell {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+
+  &:not(:last-child)::after{
+    top: auto;
+    bottom: 1px;
+    left: 16px;
+    border-bottom-width: 1px;
+  }
+
+  &--clickable::not(.dxy-field):active {
+    background-color: #e8e8e8;
+  }
+
+  &--left-icon {
+    min-width: 1em;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  &--title {
+    width: 90px;
+    flex: 0 0 90px;
+    min-width: 0;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &.no-value {
+      flex: 1;
+    }
+
+    .dxy-cell--label {
+      font-size: 12px;
+      color: #ccc;
+    }
+  }
+
+  &--value {
+    flex: 1;
+  }
+
+  &--value--left {
+    text-align: left;
+  }
+
+  &--value--right {
+    text-align: right;
+  }
+
+  &--right-icon {
+    color: #999;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}

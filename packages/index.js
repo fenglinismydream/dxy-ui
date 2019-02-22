@@ -1,9 +1,13 @@
 import Button from './button'
 import Icon from './icon'
+import Cell from './cell'
+import CellGroup from './cell-group'
 
 const components = [
   Button,
-  Icon
+  Icon,
+  Cell,
+  CellGroup
 ]
 
 const install = Vue => {
@@ -19,7 +23,9 @@ if (typeof window !== 'undefined' && window.Vue) {
 export {
   install,
   Button,
-  Icon
+  Icon,
+  Cell,
+  CellGroup
 }
 
 export default {
