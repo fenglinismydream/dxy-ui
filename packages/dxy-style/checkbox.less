@@ -1,0 +1,40 @@
+.dxy-checkbox {
+
+  &--icon {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    font-size: 14px;
+    border: 1px solid #b8b8b8;
+    &--round {
+      border-radius: 50%;
+    }
+    .dxy-icon {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      font-size: 12px;
+      color: #fff;
+      display: none;
+    }
+  
+    &--checked {
+      border: none;
+      font-size: 16px;
+      background-color: #ff605a;
+      &.dxy-checkbox--icon--disabled {
+        background-color: #e5e5e5;
+      }
+      .dxy-icon {
+        display: block;
+      }
+
+    }
+
+    &--disabled {
+      border-color: #e5e5e5;
+    }
+  }
+
+}

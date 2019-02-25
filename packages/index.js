@@ -2,12 +2,14 @@ import Button from './button'
 import Icon from './icon'
 import Cell from './cell'
 import CellGroup from './cell-group'
+import CheckBox from './checkbox'
 
 const components = [
   Button,
   Icon,
   Cell,
-  CellGroup
+  CellGroup,
+  CheckBox
 ]
 
 const install = Vue => {
@@ -25,7 +27,8 @@ export {
   Button,
   Icon,
   Cell,
-  CellGroup
+  CellGroup,
+  CheckBox
 }
 
 export default {
