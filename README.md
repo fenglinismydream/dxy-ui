@@ -152,16 +152,17 @@ new MiniCssExtractPlugin({
 ```
 
 ### 二.组件开发
-
+>> 创建packages组件目录,目录下index.js主文件,用来导出组件.
+>> 创建组件文件夹,组件文件夹下index.js为注册组件方法.XX-component.vue为各组件的文件.
 #### 1.[button](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/button)
-> 创建packages组件目录,目录下index.js主文件,用来导出组件.
->> 创建button文件夹,button文件夹下index.js为注册组件方法.dxy-component.vue为各组件的文件.
 > 
 #### 2.[icon](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/icon)
 >
 #### 3.[cell](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/cell)
 > 
 #### 4.[cell-group](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/cell-group)
+>
+#### 5.[checkbox](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/checkbox)
 
 
 
