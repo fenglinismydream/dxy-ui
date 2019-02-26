@@ -3,13 +3,16 @@ import Icon from './icon'
 import Cell from './cell'
 import CellGroup from './cell-group'
 import CheckBox from './checkbox'
+import CheckBoxGroup from './checkbox-group'
+
 
 const components = [
   Button,
   Icon,
   Cell,
   CellGroup,
-  CheckBox
+  CheckBox,
+  CheckBoxGroup
 ]
 
 const install = Vue => {
@@ -28,7 +31,8 @@ export {
   Icon,
   Cell,
   CellGroup,
-  CheckBox
+  CheckBox,
+  CheckBoxGroup
 }
 
 export default {
