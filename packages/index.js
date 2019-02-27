@@ -4,6 +4,8 @@ import Cell from './cell'
 import CellGroup from './cell-group'
 import CheckBox from './checkbox'
 import CheckBoxGroup from './checkbox-group'
+import Collapse from './collapse'
+import CollapseItem from './collapse-item'
 
 
 const components = [
@@ -12,7 +14,9 @@ const components = [
   Cell,
   CellGroup,
   CheckBox,
-  CheckBoxGroup
+  CheckBoxGroup,
+  Collapse,
+  CollapseItem
 ]
 
 const install = Vue => {
@@ -32,7 +36,9 @@ export {
   Cell,
   CellGroup,
   CheckBox,
-  CheckBoxGroup
+  CheckBoxGroup,
+  Collapse,
+  CollapseItem
 }
 
 export default {

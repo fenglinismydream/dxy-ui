@@ -1,0 +1,40 @@
+.dxy-collapse-item {
+  position: relative;
+  background-color: red;
+  &--title {
+    &::after{
+      visibility: hidden;
+    }
+
+    .dxy-cell--title {
+      width: auto;
+      flex: 1;
+    }
+
+    .dxy-cell--right-icon {
+      transition: 0.3s;
+      transform: rotate(90deg)
+    }
+  }
+
+  &--wrapper {
+    overflow: hidden;
+    will-change: height;
+    animation: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+  }
+
+  &--content{
+    font-size: 13px;
+    color: #666;
+    padding: 15px;
+  }
+
+  &--expanded{
+    .dxy-collapse-item--title {
+      .dxy-cell--right-icon {
+        transform: rotate(-90deg)
+      }
+    }
+  }
+}
