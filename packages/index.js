@@ -6,6 +6,7 @@ import CheckBox from './checkbox'
 import CheckBoxGroup from './checkbox-group'
 import Collapse from './collapse'
 import CollapseItem from './collapse-item'
+import Loading from './loading'
 
 
 const components = [
@@ -16,7 +17,8 @@ const components = [
   CheckBox,
   CheckBoxGroup,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Loading
 ]
 
 const install = Vue => {
@@ -38,7 +40,8 @@ export {
   CheckBox,
   CheckBoxGroup,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Loading
 }
 
 export default {

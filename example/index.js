@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router'
-import {Button, Icon, Cell, CellGroup, CheckBox, CheckBoxGroup, CollapseItem, Collapse} from '$pkg/index'
+import {Button, Icon, Cell, CellGroup, CheckBox, CheckBoxGroup, CollapseItem, Collapse, Loading} from '$pkg/index'
 
 Vue.use(Button)
 Vue.use(Icon)
@@ -11,7 +11,7 @@ Vue.use(CheckBox)
 Vue.use(CheckBoxGroup)
 Vue.use(Collapse)
 Vue.use(CollapseItem)
-
+Vue.use(Loading)
 
 new Vue({
   el: '#app',
