@@ -165,7 +165,8 @@ new MiniCssExtractPlugin({
 #### 5.[checkbox](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/checkbox)
 >
 #### 6.[collapse](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/collapse)
-
+>
+#### 7.[loading](https://github.com/fenglinismydream/dxy-ui/tree/master/packages/loading)
 
 
 
