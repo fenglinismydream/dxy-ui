@@ -16,11 +16,11 @@ export default {
     }
   },
   mounted () {
-    this.$toast.loading({
-      mask: true,
-      duration: 0,
-      message: '加载中...'
-    })
+    // this.$toast.loading({
+    //   mask: true,
+    //   duration: 0,
+    //   message: '加载中...'
+    // })
   },
   methods: {
     handleaaaa () {
