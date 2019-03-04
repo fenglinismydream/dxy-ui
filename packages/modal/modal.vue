@@ -12,7 +12,7 @@
 
 <script>
 import create from '../utils/create'
-export default {
+export default create({
   name: 'modal',
   props: {
     visible: Boolean,
@@ -28,5 +28,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

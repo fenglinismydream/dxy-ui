@@ -7,6 +7,7 @@ import CheckBoxGroup from './checkbox-group'
 import Collapse from './collapse'
 import CollapseItem from './collapse-item'
 import Loading from './loading'
+import Toast from './toast/index'
 
 
 const components = [
@@ -18,7 +19,8 @@ const components = [
   CheckBoxGroup,
   Collapse,
   CollapseItem,
-  Loading
+  Loading,
+  Toast
 ]
 
 const install = Vue => {
@@ -41,7 +43,8 @@ export {
   CheckBoxGroup,
   Collapse,
   CollapseItem,
-  Loading
+  Loading,
+  Toast
 }
 
 export default {

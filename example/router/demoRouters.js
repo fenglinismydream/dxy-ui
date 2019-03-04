@@ -4,6 +4,6 @@ export default [
   { path: '/cell', name: 'cell', component: () => import('@/pages/cell/index') },
   { path: '/checkbox', name: 'checkbox', component: () => import('@/pages/checkbox/index') },
   { path: '/collapse', name: 'collapse', component: () => import('@/pages/collapse/index') },
-  { path: '/loading', name: 'loading', component: () => import('@/pages/loading/index') }
-
+  { path: '/loading', name: 'loading', component: () => import('@/pages/loading/index') },
+  { path: '/toast', name: 'toast', component: () => import('@/pages/toast/index') }
 ]

@@ -43,7 +43,7 @@ const configuration = {
       modal = new (Vue.extend(VueModal))({
         el: document.createElement('div')
       })
-      modal.$on('click', this.onClick,bind(this))
+      modal.$on('click', this.onClick.bind(this))
       this.modal = modal
     }
 
