@@ -81,6 +81,8 @@ module.exports = {
       chunkFilename: '[id].css'
     }),
     new VueLoaderPlugin(),
-    new webpack.optimize.SplitChunksPlugin() // 使用默认提取配置来提取公共代码
+    new webpack.optimize.SplitChunksPlugin({
+      chunks: 'all'
+    }) // 使用默认提取配置来提取公共代码
   ]
 }

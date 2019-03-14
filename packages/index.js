@@ -8,6 +8,7 @@ import Collapse from './collapse'
 import CollapseItem from './collapse-item'
 import Loading from './loading'
 import Toast from './toast/index'
+import DateTime from './datetime-picker/index'
 
 
 const components = [
@@ -20,7 +21,8 @@ const components = [
   Collapse,
   CollapseItem,
   Loading,
-  Toast
+  Toast,
+  DateTime
 ]
 
 const install = Vue => {
@@ -44,7 +46,8 @@ export {
   Collapse,
   CollapseItem,
   Loading,
-  Toast
+  Toast,
+  DateTime
 }
 
 export default {

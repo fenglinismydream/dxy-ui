@@ -5,5 +5,6 @@ export default [
   { path: '/checkbox', name: 'checkbox', component: () => import('@/pages/checkbox/index') },
   { path: '/collapse', name: 'collapse', component: () => import('@/pages/collapse/index') },
   { path: '/loading', name: 'loading', component: () => import('@/pages/loading/index') },
-  { path: '/toast', name: 'toast', component: () => import('@/pages/toast/index') }
+  { path: '/toast', name: 'toast', component: () => import('@/pages/toast/index') },
+  { path: '/datetime', name: 'datetime', component: () => import('@/pages/datetime/index') }
 ]

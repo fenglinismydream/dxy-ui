@@ -1,0 +1,75 @@
+.dxy-picker {
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  background-color: #fff;
+  text-size-adjust: 100%;
+
+  &--toolbar{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  &--cancel, &--confirm {
+    color: #38f;
+    padding: 0 15px;
+    &:active{
+      background-color: #e8e8e8;
+    }
+  }
+
+  &--title{
+    max-width: 50%;
+    text-align: center;
+  }
+
+  &--columns{
+    display: flex;
+    position: relative;
+  }
+
+  &--loading{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    circle {
+      stroke: #38f;
+    }
+  }
+
+  &--frame, &--loading, .dxy-loading{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+
+  &-column {
+    flex: 1;
+    overflow: hidden;
+    font-size: 16px;
+    text-align: center;
+    &--item {
+      padding: 0 5px;
+      color: #999;
+      &--selected{
+        color: #000;
+      }
+      &--disabled {
+        opacity: .3;
+      }
+    }
+  }
+}

@@ -5,3 +5,7 @@ export function isDef (value) {
 export function isObj (value) {
   return value !== null && (typeof value === 'object' || typeof value === 'function')
 }
+
+export function range (num, min, max) {
+  return Math.min(Math.max(num, min), max)
+}
